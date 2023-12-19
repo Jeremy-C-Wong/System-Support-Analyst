@@ -61,4 +61,5 @@ nonexist_l = [i for i in nonexist_np if i.isnumeric()]
 
 # Exports PO list to Excel file in same directory as other Excel files
 nonexist_df = pd.DataFrame(nonexist_l)
-nonexist_df.to_excel('C:/Users/wongj/OneDrive/Documents/School/Supply Chain System Analyst/Scripts/Compare 856 with POFR/nonexist.xlsx')
+# nonexist_df.to_excel('C:/Users/wongj/OneDrive/Documents/School/Supply Chain System Analyst/Scripts/Compare 856 with POFR/nonexist.xlsx')
+nonexist_df.to_excel(os.path.join(abs_path, 'Compare 856 with POFR/nonexist.xlsx'))
