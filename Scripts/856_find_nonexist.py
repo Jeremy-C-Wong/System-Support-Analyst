@@ -6,6 +6,7 @@
 # - pofr = Purchase Orders for Receiving
 
 # Prerequisites:
+# - Python interpreter installed on system
 # - pip install pandas
 # - pip install xlrd
 # - pip install openpyxl
