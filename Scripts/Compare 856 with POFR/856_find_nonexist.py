@@ -6,6 +6,7 @@
 # - pofr = Purchase Orders for Receiving
 
 # Prerequisites:
+# - Python interpreter installed on system
 # - pip install pandas
 # - pip install xlrd
 # - pip install openpyxl
@@ -21,8 +22,11 @@ import os
 # Define file paths that Excel files will be read from
 abs_path = os.path.dirname(__file__)
 
-rel_usn_path = 'Compare 856 with POFR/usn.xls'
-rel_pofr_path = 'Compare 856 with POFR/pofr.xls'
+# rel_usn_path = 'Compare 856 with POFR/usn.xls'
+# rel_pofr_path = 'Compare 856 with POFR/pofr.xls'
+
+rel_usn_path = 'usn.xls'
+rel_pofr_path = 'pofr.xls'
 
 usn_path = os.path.join(abs_path, rel_usn_path)
 pofr_path = os.path.join(abs_path, rel_pofr_path)
@@ -62,4 +66,5 @@ nonexist_l = [i for i in nonexist_np_all if i.isnumeric()]
 nonexist_df = pd.DataFrame(nonexist_l)
 
 # nonexist_df.to_excel('C:/Users/wongj/OneDrive/Documents/School/Supply Chain System Analyst/Scripts/Compare 856 with POFR/nonexist.xlsx')
-nonexist_df.to_excel(os.path.join(abs_path, 'Compare 856 with POFR/nonexist.xlsx'))
+# nonexist_df.to_excel(os.path.join(abs_path, 'Compare 856 with POFR/nonexist.xlsx'))
+nonexist_df.to_excel(os.path.join(abs_path, 'nonexist.xlsx'))
