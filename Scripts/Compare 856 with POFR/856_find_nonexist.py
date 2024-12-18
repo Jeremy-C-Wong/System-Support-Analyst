@@ -22,9 +22,6 @@ import os
 # Define file paths that Excel files will be read from
 abs_path = os.path.dirname(__file__)
 
-# rel_usn_path = 'Compare 856 with POFR/usn.xls'
-# rel_pofr_path = 'Compare 856 with POFR/pofr.xls'
-
 rel_usn_path = 'usn.xls'
 rel_pofr_path = 'pofr.xls'
 
@@ -65,6 +62,4 @@ nonexist_l = [i for i in nonexist_np_all if i.isnumeric()]
 # Exports PO list to Excel file in same directory as other Excel files
 nonexist_df = pd.DataFrame(nonexist_l)
 
-# nonexist_df.to_excel('C:/Users/wongj/OneDrive/Documents/School/Supply Chain System Analyst/Scripts/Compare 856 with POFR/nonexist.xlsx')
-# nonexist_df.to_excel(os.path.join(abs_path, 'Compare 856 with POFR/nonexist.xlsx'))
 nonexist_df.to_excel(os.path.join(abs_path, 'nonexist.xlsx'))
