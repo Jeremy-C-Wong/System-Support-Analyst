@@ -57,4 +57,16 @@ now = datetime.now()
 months_back = now - monthdelta(MONTHS_BACK_RANGE)
 edice_pd_df = edice_pd_df[edice_pd_df["Acknowledge Date"] >= months_back]
 
+# Filter out unnecessary columns
+keep_cols = [
+                'PO No',
+                'PO Item No',
+                'PO Item Description',
+                'Confirm Cost',
+                'Ordered Cost',
+                'Cost Ratio'
+            ]
+
+edice_pd_df = edice_pd_df[keep_cols]
+
 edice_pd_df.to_excel(os.path.join(abs_path, 'in_thresholds.xlsx'))
