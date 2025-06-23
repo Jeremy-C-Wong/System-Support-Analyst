@@ -69,4 +69,6 @@ keep_cols = [
 
 edice_pd_df = edice_pd_df[keep_cols]
 
+edice_pd_df = edice_pd_df.sort_values(['PO No', 'PO Item No'])
+
 edice_pd_df.to_excel(os.path.join(abs_path, 'in_thresholds.xlsx'))
