@@ -11,7 +11,7 @@
 # - pip install openpyxl
 # = pip install monthdelta
 
-# - Rename the EDI Confirm Exceptions file to edice.xls
+# - Rename the EDI Confirm Exceptions file to edice.xlsx
 
 import numpy as np
 import pandas as pd
@@ -23,14 +23,14 @@ import os
 # Define constants
 MIN_ORDER_COST = 0
 MIN_CONFIRM_COST = 0
-RATIO_UPPER_TOL = 1.1
-RATIO_LOWER_TOL = 0.75
+RATIO_UPPER_TOL = 1.1   # 10% above
+RATIO_LOWER_TOL = 0.75  # 25% below
 MONTHS_BACK_RANGE = 2
 
 # Define file paths that Excel files will be read from
 abs_path = os.path.dirname(__file__)
 
-rel_edice_path = 'edice.xls'
+rel_edice_path = 'edice.xlsx'
 
 edice_path = os.path.join(abs_path, rel_edice_path)
 
