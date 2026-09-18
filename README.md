@@ -2,6 +2,9 @@
  
 Some crude scripts to assist with daily tasks. More helpful with large quantities.
 
+# Clean Catalog Requests
+Did not get around to completing. Future project?
+
 ## Clear 855 Price Exceptions
 Determines which price exceptions to clear based on upper and lower tolerances defined by the user. 
 
